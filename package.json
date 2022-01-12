@@ -1,6 +1,6 @@
 {
   "name": "react-native-snap-carousel-v4",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "Original project: https://github.com/meliorence/react-native-snap-carousel I made this package because I need the version 4 package to be published, so that I can run EAS Build on my expo app, previously I was pointing directly to the v4 branch on the original repo, but EAS Build crashes when installing dependencies, I just need v4 becouse it works on my app and doesn`t have any bug when sliding fast.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
