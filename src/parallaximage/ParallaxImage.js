@@ -28,7 +28,8 @@ export default class ParallaxImage extends Component {
         AnimatedImageComponent: PropTypes.oneOfType([
             PropTypes.func,
             PropTypes.object
-        ])
+        ]),
+        useNativeDriver: PropTypes.bool
     };
 
     static defaultProps = {
@@ -37,7 +38,8 @@ export default class ParallaxImage extends Component {
         parallaxFactor: 0.3,
         showSpinner: true,
         spinnerColor: 'rgba(0, 0, 0, 0.4)',
-        AnimatedImageComponent: Animated.Image
+        AnimatedImageComponent: Animated.Image,
+        useNativeDriver: true
     }
 
     constructor (props) {
@@ -124,7 +126,7 @@ export default class ParallaxImage extends Component {
             duration: fadeDuration,
             easing: Easing.out(Easing.quad),
             isInteraction: false,
-            useNativeDriver: true
+            useNativeDriver: this.props.useNativeDriver
         }).start(() => {
             this.setState({ status: 3 });
         });
